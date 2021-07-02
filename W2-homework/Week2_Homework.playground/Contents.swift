@@ -32,7 +32,45 @@ extension Int {
 
 //ÖDEV: İki parametreli ve FARKLI tipli bir generic örneği yapınız. (T, U) ???
 
+func findCity<T: Equatable, U: Numeric>(city :T, id :U) {
+    
+ }
 
+
+
+//MARK: static keyword neden kullanırız. Örnek bir kullanım yapınız.
+
+/*
+ Static type method tur. Obje yaratmadan çağırılabilecek tiplerdir.
+  Static keyword'ü override edilemez, final yapıdadır.
+ */
+
+class ExampleClass {
+    
+    class func hello() {
+        print("Hello")
+    }
+    
+    static func statichello() { // final func
+        print("Static Hello")
+    }
+}
+
+class ExampleSubClass: ExampleClass {
+    
+    override class func hello() {
+        print("override Hello")
+    }
+    
+    // override static func statichello() {} hata alır.
+}
+
+
+/*
+if let - guard let kullanım tercihi
+ 
+ Koşulun en baştan kontrol edilmesi gerektiğinde guard-let yapısı kullanılır. Guard-let yapısı ile boş gelebilecek verilerin en baştan değer ataması yapılmış olur. Hata en başta yakalanır. if-let ise isteğe bağlı olarak eklenen else yapısı işlenerek kullanılır.
+*/
 
 
 
